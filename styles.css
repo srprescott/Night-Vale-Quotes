@@ -28,6 +28,10 @@ body{
     font-family: 'Vale';
 }
 
+
+
+/*      Section One Quotes       */
+
 .one{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -57,7 +61,6 @@ h1{
 
 
 quote{
-    
     font-size: 2rem;
     padding: 20px;
     margin: 30px;
@@ -76,6 +79,101 @@ quote{
 
 
 
+/*   Section Two StorySlideShow   */
+
+.two {
+    margin: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+
+
+.slide-show{
+    margin: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.slideshow{
+    -webkit-box-shadow: 2px 2px 10px 4px black;
+    box-shadow: 2px 2px 10px 4px black;
+}
+
+.slides{
+    height: 680px;
+    width: 990px;
+}
+
+.slide-end{
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    font-size: 4rem;
+    background-color: #775D5E;
+    color:white;
+    opacity: .8;
+    
+}
+
+.end{
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.button{
+    font-size: 30px;
+    color:black;
+    opacity: .1;
+    width: 50px;
+    border: none;
+}
+
+.prev{
+    left: -50px;
+}
+
+.next{
+    left: -50px;
+}
 
 
 
@@ -86,6 +184,28 @@ quote{
 
 
 
+/*      Animations       */
+
+@-webkit-keyframes pulse {
+    0% {color:white}
+    25% {color:black}
+    50% {color:#9A3B91}
+    75% {color:black}
+    100% {color: white;}
+}
+
+@keyframes pulse {
+    0% {color:white}
+    25% {color:black}
+    50% {color:#9A3B91}
+    75% {color:black}
+    100% {color: white;}
+}
+
+h1 {
+    -webkit-animation: pulse 10s infinite;
+    animation: pulse 10s infinite;
+}
 
 
 
@@ -94,9 +214,51 @@ quote{
 
 
 
+@-webkit-keyframes button-pulse {
+    0% {background-color:white}
+    25% {background-color:#9A3B91}
+    50% {background-color:white}
+    75% {background-color:#9A3B91}
+    100% {background-color: white;}
+}
+
+@keyframes button-pulse {
+    0% {background-color:white}
+    25% {background-color:#9A3B91}
+    50% {background-color:white}
+    75% {background-color:#9A3B91}
+    100% {background-color: white;}
+}
+
+.button:hover{
+    -webkit-animation: button-pulse 5s infinite;
+    animation: button-pulse 5s infinite;
+    cursor: pointer;
+}
 
 
 
+
+@-webkit-keyframes jiggle {
+    0% {-webkit-transform: rotate(1deg);transform: rotate(1deg)}
+    25% {-webkit-transform: rotate(-1deg);transform: rotate(-1deg)}
+    50% {-webkit-transform: rotate(1deg);transform: rotate(1deg)}
+    75% {-webkit-transform: rotate(-1deg);transform: rotate(-1deg)}
+    100% {-webkit-transform: rotate(1deg);transform: rotate(1deg)}
+}
+
+@keyframes jiggle {
+    0% {-webkit-transform: rotate(1deg);transform: rotate(1deg)}
+    25% {-webkit-transform: rotate(-1deg);transform: rotate(-1deg)}
+    50% {-webkit-transform: rotate(1deg);transform: rotate(1deg)}
+    75% {-webkit-transform: rotate(-1deg);transform: rotate(-1deg)}
+    100% {-webkit-transform: rotate(1deg);transform: rotate(1deg)}
+}
+
+quote:hover {
+    -webkit-animation: jiggle .5s forwards;
+    animation: jiggle .5s forwards;
+}
 
 
 

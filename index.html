@@ -116,7 +116,29 @@
             
         </section>
         
-        
+        <section class="two">
+           <h1>Good Night, Night Vale</h1>
+            <div class="slide-show">
+                <button class="button prev" onclick="plusDivs(-1)">&#10094;</button>
+                <div class="slideshow">
+                    <img class="slides" src="images/Goodnight%20Night%20Vale%201.jpg" alt="Good Night, Night Vale">
+                    <img class="slides" src="images/Goodnight%20Night%20Vale%202.jpg" alt="Good Night, Night Vale">
+                    <img class="slides" src="images/Goodnight%20Night%20Vale%203.jpg" alt="Good Night, Night Vale">
+                    <img class="slides" src="images/Goodnight%20Night%20Vale%204.jpg" alt="Good Night, Night Vale">
+                    <img class="slides" src="images/Goodnight%20Night%20Vale%205.jpg" alt="Good Night, Night Vale">
+                    <img class="slides" src="images/Goodnight%20Night%20Vale%206.jpg" alt="Good Night, Night Vale">
+                    <img class="slides" src="images/Goodnight%20Night%20Vale%207.jpg" alt="Good Night, Night Vale">
+                    <img class="slides" src="images/Goodnight%20Night%20Vale%208.jpg" alt="Good Night, Night Vale">
+                    <img class="slides" src="images/Goodnight%20Night%20Vale%209.jpg" alt="Good Night, Night Vale">
+                    <img class="slides" src="images/Goodnight%20Night%20Vale%2010.jpg" alt="Good Night, Night Vale">
+                    <div class="slide-end">
+                        <h2 class="slides end"></h2>
+                    </div>
+
+                </div>
+                <button class="button next" onclick="plusDivs(+1)">&#10095;</button>
+            </div>
+        </section>
         
         
         
@@ -124,13 +146,6 @@
         
         
     </div>
-    
-    
-    
-    
-        
-        
-        
         
     <footer>
         <div class="footer">
@@ -138,7 +153,31 @@
         </div>
     </footer>
        
-             
+          
+          
+    <script>
+        
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length} ;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+        
+    </script>         
+    
+       
         
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
